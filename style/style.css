@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  background-color: #392109;
+}
+
+li{
+    list-style: none;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.container {
+  padding: 0 25px;
+}
+
+.main-slider {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.main-slider__item img {
+  width: 100%;
+}
+
+.main-slider__item {
+  max-height: 675px;
+}
+
+.main-slider .owl-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.faq h2 {
+  color: #fff;
+}
+
+.faq__accordion__item {
+  margin-top: 30px;
+}
+
+.faq__accordion__item__head {
+  padding: 15px 25px 15px 25px;
+  background-color: #c9ad12;
+  color: #c70039;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.faq__accordion__item__head:hover {
+  background-color: #f2d118;
+}
+
+.faq__accordion__item__head:hover + .faq__accordion__content {
+  background-color: #f2d118;
+  /* transition: .5s; */
+}
+
+.faq__accordion__item__head .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.faq__accordion__item__head.active {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: 0.5s;
+}
+
+.faq__accordion__item__head__ico {
+  width: 25px;
+  height: 5px;
+  background-color: #c70039;
+  position: relative;
+}
+
+.faq__accordion__item__head__ico::after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 5px;
+  background-color: #c70039;
+  transform: rotate(90deg);
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+.faq__accordion__item__head.active .faq__accordion__item__head__ico::after {
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+.faq__accordion__content {
+  padding: 15px 25px 15px 25px;
+  background-color: #c9ad12;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: none;
+  color: #fff;
+  transition: background-color 0.5s;
+}
+
+.tabs__caption {
+  display: flex;
+  border-bottom: 1px solid #c9ad12;
+  padding: 0;
+}
+
+.tabs__caption .ico img{
+    width: 50px;
+}
+
+.tabs__caption li {
+  flex-grow: 1;  
+  padding: 25px 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs__caption li:hover {
+  transition: 0.5s;
+  background-color: #c9ad12;
+}
+
+.tabs__caption li.active{
+    background-color: #c9ad12;
+}
+
+.tabs__content{
+ display: none;
+}
+
+.tabs__content__page{
+    display: none;
+}
+
+.tabs__content__page.active{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+}
+
+.tabs__content.active{
+    display: block;
+}
+
+.tabs__content__item {
+  width: 200px;
+  height: 110px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.tabs__content__item:hover .tabs__content__item__more-info{
+    opacity: 1;
+    transition: .5s;
+}
+
+.tabs__content__item__more-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.tabs__content__item__more-info a{
+    text-decoration: none;
+    color: #000;
+    text-decoration: none;    
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: green;
+    border-radius: 15px;
+    padding: 8px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.tabs__content__item__more-info p{
+    color: #fff;
+}
+
+.tabs__content__item img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Lazy load */
+
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+img[data-src] {
+  opacity: 0;
+}
+
+.tabs__content__pagination ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs__content__pagination li{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c9ad12;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tabs__content__pagination li:not(:last-child){
+    margin-right: 20px;
+}
+
+.tabs{
+    margin-bottom: 100px;
+}
